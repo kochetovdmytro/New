@@ -54,7 +54,7 @@
             <!-- <HINT> Use Bootstrap Collapse to hide exam first, more details could be found here
             https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp-->
         <br>
-        <center><button data-toggle="collapse" data-target="#exam">Start Exam</button></center>
+        <center><button data-toggle="collapse" data-target="#exam" class = "btn btn-primary">Start Exam</button></center>
         <br>
         <div id="exam" class="collapse">
             {% if user.is_authenticated %}
@@ -80,7 +80,7 @@
                             <label class="form-check-label">
                                 <input type="checkbox" name="choice_{{choice.id}}"
                                     class="form-check-input" id="{{choice.id}}"
-                                    value="{{choice.id}}">{{ choice.choice_text }}
+                                    value="{{choice.id}}">{{ choice.content }}
                             </label>
                         </div>
                         {% endfor %}
